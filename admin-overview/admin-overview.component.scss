@@ -1,0 +1,774 @@
+.pageContainer1 {
+  margin-left: 1em !important;
+  margin-top: 5em !important;
+  padding-right: 2em !important;
+  background-color: #F5FAFF;
+}
+
+.docsRow{
+width: 100% !important;
+}
+
+#chart-gauge, #chart-line {
+  display: block;
+  min-width: 19em;
+  max-width: 30em;
+  height: 17em;
+  margin: 0 auto;
+}
+#chart-pie{
+  display: block;
+  min-width: 14em;
+  // max-width: 30em;
+  height:16.5em;
+  margin: 0 auto;
+}
+
+#chart-column {
+  display: block;
+  min-width: 18em;
+  // max-width: 30em;
+  height: 17.5em;
+  margin: 0 auto;
+}
+
+#chart-area {
+  display: block;
+  height: 17em;
+  margin: 0 auto;
+}
+
+.total{
+  font-size: 40px;
+  font-weight: 700;
+  padding-left:0.4em;
+}
+
+.stat1:hover{
+  color: #333399 !important;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bordergraph{
+  background: white;
+  border-radius: 8px;
+}
+.voyage{
+  font-size: 18px;
+  font-weight: 700;
+}
+.cargos{
+color: var(--Color-light-logo-text-color, #000);
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+letter-spacing: -0.13px;
+}
+
+.cargoNo{
+  color: var(--Color-light-logo-text-color, #000);
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.mat-mdc-text-field-wrapper {
+  width: 63% !important;
+  // border-radius: 10px;
+}
+
+::ng-deep .mat-mdc-option .mat-pseudo-checkbox-minimal{
+  display: none;
+}
+
+::ng-deep .mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked{
+background-color: #09224F !important;
+}
+
+// ::ng-deep .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
+//   color: white !important;
+//   // background: #FC1B1C;
+//   padding: 4px 2px 0px 2px ;
+//   border-radius: 2px;
+// }
+
+::ng-deep .custom-select-field1 .mat-mdc-select-value {
+  padding-left: 2em;
+}
+
+.calender{
+  position: absolute;
+  top: 0.5em;
+  left: 0em;
+  color: #93A3ABE5;
+}
+
+::ng-deep .custom-select-field .mdc-text-field--outlined{
+height: 2.3em !important;
+}
+
+::ng-deep .custom-select-field1 .mdc-text-field--outlined {
+height: 50% !important;
+}
+
+::ng-deep .custom-select-field1 .mat-mdc-form-field-infix {
+padding-bottom: 0px !important;
+}
+
+::ng-deep .custom-select-field1 .mdc-evolution-chip-set .mdc-evolution-chip-set__chips {
+margin-top: -0.5em;
+padding-top: 0.5em;
+}
+
+::ng-deep .custom-select-field1 .mat-mdc-select-arrow svg {
+top: -50%;
+left: 50%;
+}
+
+
+::ng-deep .custom-select-field1 .mat-mdc-select-trigger,
+::ng-deep .custom-select-field .mat-mdc-select-trigger
+{
+top: -0.35em;
+left: 0em;
+}
+
+::ng-deep .custom-select-field1 .mat-mdc-select-value-text,
+::ng-deep .custom-select-field .mat-mdc-select-value-text
+{
+font-size: 15px !important;
+}
+
+::ng-deep .custom-select-field1 .mat-mdc-select-value
+{
+width: 100%;
+overflow: hidden;
+text-overflow: clip;
+white-space: nowrap;
+}
+
+
+
+.sub{
+font-size: 12px;
+}
+.sub1{
+font-size: 12px;
+}
+
+.asterisk{
+color: #FC1B1C;
+}
+
+.end{
+display: flex;
+justify-content: end;
+}
+.end1{
+display: flex;
+justify-content: end;
+align-items: center;
+}
+
+.start{
+display: flex;
+justify-content: start;
+align-items: center;
+}
+
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-floating-label{
+padding-bottom:1em;
+}
+
+.header{
+color: #000;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.filter{
+font-size: 14px;
+font-weight: 700;
+}
+
+.co{
+font-size: 11px;
+bottom: -0.4em !important;
+padding-left: 2px;
+}
+
+
+.errorText{
+color: #EE4352;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+margin-bottom: 0 !important;
+}
+
+.subPad{
+padding-top: 1.5em;
+padding-right: 0em;
+}
+
+.voyageCard{
+background:#FFF;
+box-shadow: 0px 4px 16px 0px rgba(17, 34, 17, 0.07);
+padding: 1em;
+padding-left: 0px;
+margin-bottom: 2em;
+// width: 87%;
+}
+
+
+.tiles{
+cursor: pointer;
+}
+
+.totalVal{
+background: #005591;
+border-radius: 5px;
+}
+.totalVal:hover{
+box-shadow: 4px 6px 7.3px 0px rgba(0, 0, 0, 0.23);
+}
+
+.IntransitV{
+background: #F68920;
+border-radius: 5px;
+}
+.IntransitV:hover{
+box-shadow: 4px 6px 7.3px 0px rgba(0, 0, 0, 0.23);
+}
+
+.CompletedV{
+background: #148279;
+border-radius: 5px;
+}
+.CompletedV:hover{
+box-shadow: 4px 6px 7.3px 0px rgba(0, 0, 0, 0.23);
+}
+
+.vl {
+border-right: 5px solid white;
+height: 4em;
+}
+
+.text{
+color: #FFF;
+// font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 16px;
+letter-spacing: -0.32px;
+}
+
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .voyageCard{
+    margin-bottom: 1em !important;
+    // width: 87%;
+    }
+.text {
+ font-size: 11px !important;
+}
+.pieAlignment{
+  left:5em !important;
+}
+
+.value{
+  font-size: 20px !important;
+}
+.vl{
+  margin-left: -1em !important;
+}
+.bullet{
+  right: 2em !important;
+}
+.placement{
+  position: absolute;
+  top: 2em;
+  right: 4em !important;
+  z-index: 1000;
+}
+.spacebottom{
+margin-bottom: 1em;
+padding-right: 0px;
+}
+
+.sub{
+  font-size: 8px;
+}
+
+}
+@media (min-width: 375px) and (max-width: 425px) {
+  .voyageCard{
+    margin-bottom: 1em !important;
+    // width: 87%;
+    }
+.text {
+ font-size: 11px !important;
+}
+.pieAlignment{
+  left:7em !important;
+}
+.value{
+  font-size: 20px !important;
+}
+.vl{
+  margin-left: -1em !important;
+}
+.bullet{
+  right: 2em !important;
+}
+.placement{
+  position: absolute;
+  top: 2em;
+  right: 4.5em !important;
+  z-index: 1000;
+}
+.spacebottom{
+margin-bottom: 1em;
+padding-right: 0px;
+}
+
+.sub{
+  font-size: 8px;
+}
+
+}
+@media (min-width: 425px) and (max-width: 525px) {
+  .voyageCard{
+    margin-bottom: 1em !important;
+    // width: 87%;
+    }
+.text {
+ font-size: 11px !important;
+}
+.value{
+  font-size: 20px !important;
+}
+.vl{
+  margin-left: -1em !important;
+}
+.bullet{
+  right: 2em !important;
+}
+.placement{
+  position: absolute;
+  top: 2em;
+  right: 6em !important;
+  z-index: 1000;
+}
+.spacebottom{
+margin-bottom: 1em;
+padding-right: 0px;
+}
+
+}
+@media (min-width: 525px) and (max-width: 575px) {
+.text {
+ font-size: 11px !important;
+}
+
+.tabVoyageCard{
+  width:103% !important;
+}
+.value{
+  font-size: 20px !important;
+}
+.vl{
+  margin-left: -1em !important;
+}
+.bullet{
+  right: 2em !important;
+}
+.placement{
+  position: absolute;
+  top: 2em;
+  right: 7em !important;
+  z-index: 1000;
+}
+.spacebottom{
+margin-bottom: 1em;
+padding-right: 0px;
+}
+
+}
+@media (min-width: 575px) and (max-width: 600px) {
+  .text {
+   font-size: 11px !important;
+  }
+
+  .tabVoyageCard{
+    width:93% !important;
+  }
+  .value{
+    font-size: 20px !important;
+  }
+  .vl{
+    margin-left: -1em !important;
+  }
+  .bullet{
+    right: 2em !important;
+  }
+  .placement{
+    position: absolute;
+    top: 2em;
+    right: 7em !important;
+    z-index: 1000;
+}
+.spacebottom{
+  margin-bottom: 1em;
+  padding-right: 0px;
+}
+
+}
+@media (min-width: 600px) and (max-width: 625px) {
+.tabVoyageCard{
+  width:96% !important
+}
+.text {
+ font-size: 11px !important;
+}
+.value{
+  font-size: 20px !important;
+}
+.vl{
+  margin-left: -1em !important;
+}
+.bullet{
+  right: 2em !important;
+}
+.placement{
+  position: absolute;
+  top: 2em;
+  right: 9em !important;
+  z-index: 1000;
+}
+.spacebottom{
+margin-bottom: 1em;
+padding-right: 0px;
+}
+
+}
+@media (min-width: 625px) and (max-width: 650px) {
+.tabVoyageCard{
+  width:95% !important
+}
+.text {
+ font-size: 11px !important;
+}
+.value{
+  font-size: 20px !important;
+}
+.vl{
+  margin-left: -1em !important;
+}
+.bullet{
+  right: 2em !important;
+}
+.placement{
+  position: absolute;
+  top: 2em;
+  right: 9em !important;
+  z-index: 1000;
+}
+.spacebottom{
+margin-bottom: 1em;
+padding-right: 0px;
+}
+
+}
+@media (min-width: 650px) and (max-width: 700px) {
+.tabVoyageCard{
+  width:93% !important
+}
+.text {
+ font-size: 11px !important;
+}
+.value{
+  font-size: 20px !important;
+}
+.vl{
+  margin-left: -1em !important;
+}
+.bullet{
+  right: 2em !important;
+}
+.placement{
+  position: absolute;
+  top: 2em;
+  right: 9.5em !important;
+  z-index: 1000;
+}
+.spacebottom{
+margin-bottom: 1em;
+padding-right: 0px;
+}
+
+}
+@media (min-width: 700px) and (max-width: 767px) {
+.tabVoyageCard{
+  width:93% !important
+}
+.text {
+ font-size: 11px !important;
+}
+.value{
+  font-size: 20px !important;
+}
+.vl{
+  margin-left: -1em !important;
+}
+.bullet{
+  right: 2em !important;
+}
+.placement{
+  position: absolute;
+  top: 2em;
+  right: 10em !important;
+  z-index: 1000;
+}
+.spacebottom{
+margin-bottom: 1em;
+padding-right: 0px;
+}
+
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .text {
+   font-size: 11px !important;
+  }
+  .value{
+    font-size: 20px !important;
+  }
+  .vl{
+    margin-left: -1em !important;
+  }
+  .bullet{
+    right: 2em !important;
+  }
+  .placement{
+    position: absolute;
+    top: 2em;
+    right: 2em !important;
+    z-index: 1000;
+}
+.spacebottom{
+  margin-bottom: 1em;
+  padding-right: 0px;
+}
+
+}
+@media (min-width: 1024px) and (max-width: 1100px) {
+.m-main {
+  .text {
+   font-size: 13px;
+  }
+}
+.sub{
+  font-size: 11px !important;
+}
+}
+@media (min-width: 1100px) and (max-width: 1200px) {
+.m-main {
+  .text {
+   font-size: 15px;
+  }
+}
+.sub{
+  font-size: 11px !important;
+}
+
+
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+.m-main {
+  .text {
+   font-size: 15px;
+  }
+}
+.sub{
+  font-size: 8px !important;
+}
+.cargoNo{
+  font-size: 20px !important;
+}
+.cargos{
+  font-size: 10px !important;
+}
+
+}
+@media (min-width: 1300px) and (max-width: 1400px) {
+.m-main {
+  .text {
+   font-size: 15px;
+  }
+}
+.sub{
+  font-size: 9px !important;
+}
+.cargoNo{
+  font-size: 23px !important;
+}
+.cargos{
+  font-size: 11px !important;
+}
+}
+@media (min-width: 1400px) and (max-width: 1500px) {
+.m-main {
+  .text {
+   font-size: 15px;
+  }
+}
+.sub{
+  font-size: 10px !important;
+}
+
+
+}
+@media (min-width: 1500px) and (max-width: 1600px)  {
+.m-main {
+  .text {
+   font-size: 15px;
+  }
+}
+.sub{
+  font-size: 11px !important;
+}
+
+
+}
+@media (min-width: 1201px)  {
+.m-main {
+  .text {
+   font-size: 16px;
+  }
+}
+
+}
+
+.value{
+color: #FFF;
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px;
+}
+
+.custom-bullets_total {
+width: 4em;
+height: 4em;
+border-radius: 2em;
+background: #104b75;
+z-index: 1000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.custom-bullets_intransit {
+width: 4em;
+height: 4em;
+border-radius: 2em;
+background: #874f0e;
+z-index: -1;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.custom-bullets_completed {
+width: 4em;
+height: 4em;
+border-radius: 2em;
+background: #054c46;
+z-index: -1;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+filter: grayscale(20%);
+}
+
+.placement{
+position: absolute;
+top: 2em;
+right: 4em;
+z-index: 1000
+}
+
+.width-66{
+width: 66.6%;
+}
+
+.mp{
+padding-top: 0.5em;
+// padding-left: 1em;
+}
+
+.bullet{
+position: absolute;
+right: 1em;
+}
+
+.selected-chips-container {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+margin-left: 10px;
+}
+
+.custom-select-field2 .mat-form-field-wrapper {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.custom-select-field2 .mat-chip-listbox {
+display: inline-flex;
+width: 100%;
+}
+
+::ng-deep .custom-select-field1 .mdc-text-field--outlined{
+height: 2.3em !important;
+}
+
+.chipPlace{
+position: absolute;
+top: -1em;
+right: 1.2em;
+}
+
+.chips{
+position: absolute;
+top:0.2em;
+}
+
+.custom-select-field2 {
+width: 100%;
+}
+
+::ng-deep .mat-mdc-chip.mdc-evolution-chip--with-trailing-action .mat-mdc-chip-action-label {
+padding-top: 5px;
+}
+
+::ng-deep .custom-select-field2 .mat-mdc-select-arrow-wrapper{
+  padding-bottom: 1em;
+}
+
+
+.chips1 {
+  pointer-events: none;
+}
+.cancel-icon {
+  pointer-events: auto;
+}
+.pieAlignment{
+  position: absolute;
+  top:5em;
+  left:9em;
+}

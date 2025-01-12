@@ -1,0 +1,218 @@
+<div class="pageContainer1 pageRow">
+  <div class="row mp">
+      <p class="header">Overview</p>
+  </div>
+
+
+  <div class="row voyageCard tabVoyageCard">
+      <div class="docsRow end pb-2">
+          <div class="col-xl-3 col-lg-6 col-md-7 col-sm-12 col-12 col-xs-12 end" *ngIf="!isSmall" style="position: relative;margin-left: -1em;margin-top: -0.25em;">
+              <mat-chip-listbox class="chips chips1">
+                <mat-chip-option *ngFor="let year of yearsControl.value.slice(1)"
+                  [removable]="true" (removed)="onYearRemoved(year)">
+                  {{ year }}
+                  <mat-icon class="cancel-icon" matChipRemove>cancel</mat-icon>
+                </mat-chip-option>
+              </mat-chip-listbox>
+            </div>
+          <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6 col-12 col-xs-12 end">
+            <mat-form-field class="custom-select-field1" appearance="outline" style="position: relative;width: 10em;">
+              <span class="calender"><mat-icon>today</mat-icon></span>
+              <mat-select [(value)]="selectedYears" [formControl]="yearsControl" multiple (selectionChange)="onSelectionChange($event)">
+                <mat-select-trigger class="chipPlace">
+                  <mat-chip-listbox class="chips1">
+                    <mat-chip-option *ngIf="yearsControl.value.length > 0"
+                      [removable]="true" (removed)="onYearRemoved(yearsControl.value[0])">
+                      {{ yearsControl.value[0] }} <!-- Display only the first selected value -->
+                      <mat-icon class="cancel-icon" matChipRemove>cancel</mat-icon>
+                    </mat-chip-option>
+                  </mat-chip-listbox>
+                </mat-select-trigger>
+                <mat-option *ngFor="let year of years" [value]="year">{{ year }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 end" *ngIf="selectedYears.length === 0">
+          <span  class="errorText"> *Select atleast one year to view data.</span>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 col-xs-12 pb-3 tiles" (click)="Total()">
+              <div class="card">
+                  <div class="card-content totalVal">
+                      <div class="card-body">
+                          <div class="media pt">
+                              <span class="placement">
+                                  <img src="/assets/milestone.png" alt="">
+                              </span>
+                          <div class="row docsRow pt-2">
+                              <div class="col-1 vl"></div>
+                              <div class="col-7">
+                                  <p class="text">TOTAL VOYAGE</p>
+                                  <p class="value">{{totalCount?(totalCount | number):0}}</p>
+                              </div>
+                              <div class="col-3 bullet">
+                                  <div class="custom-bullets_total">
+                                  </div>
+                              </div>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 col-xs-12 pb-3 tiles" (click)="Intransit()">
+              <div class="card">
+                  <div class="card-content IntransitV">
+                      <div class="card-body">
+                          <div class="media pt">
+                              <span class="placement">
+                              <img src="/assets/ship_white.gif" alt="" width="70px">
+                          </span>
+                          <div class="row docsRow  pt-2">
+                          <div class="col-1 vl"></div>
+                          <div class="col-7">
+                              <p class="text">IN TRANSIT</p>
+                              <p class="value">{{commencedCount?(commencedCount | number):0}}</p>
+                          </div>
+                          <div class="col-3 bullet">
+                              <div class="custom-bullets_intransit">
+                              </div>
+                          </div>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 col-xs-12 pb-3 tiles" (click)="Completed()">
+              <div class="card">
+                  <div class="card-content CompletedV">
+                      <div class="card-body">
+                          <div class="media pt">
+                              <span class="placement">
+                                  <img src="/assets/Mask_group.png" alt="">
+                              </span>
+                              <div class="row docsRow  pt-2">
+                              <div class="col-1 vl"></div>
+                              <div class="col-7">
+                                  <p class="text">COMPLETED</p>
+                                  <p class="value">{{completedCount?(completedCount | number):0}}</p>
+                              </div>
+
+                              <div class="col-3 bullet">
+                                  <div class="custom-bullets_completed">
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      </div>
+  </div>
+
+  <div class="row docsRow" style="margin-bottom: 2em">
+    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 spacebottom">
+      <div class="bordergraph">
+        <div class="row docsRow" style="padding: 1em">
+          <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-6 col-xs-6">
+            <div
+              class="col-xs-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12"
+            >
+              <p class="cargos">Total Cargos Moved</p>
+            </div>
+            <div
+              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12"
+            >
+              <p class="cargoNo">
+                {{ totalCargoMoved ? (totalCargoMoved | number) : 0 }}M
+              </p>
+            </div>
+          </div>
+          <div  class="col-xl-7 col-lg-7 col-md-6 col-sm-6 col-6 col-xs-6 subPad">
+            <div
+              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 end"
+            >
+              <p class="sub" style="margin-bottom: 0px">
+                <span class="asterisk">*</span>Unit of Measure: MTs
+              </p>
+            </div>
+            <div
+              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 end"
+            >
+              <p class="sub">
+                <span class="asterisk">*</span>All the Numeric values are in
+                Millions
+              </p>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12">
+          <div id="chart-column"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 bordergraph spacebottom">
+      <div class="row docsRow" style="padding: 1em">
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-7 col-xs-7">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12">
+            <p class="cargos">Total CO<sub class="co">2</sub> Emission</p>
+          </div>
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12">
+            <p class="cargoNo">{{ totalCo2 ? (totalCo2 | number) : 0 }} MTs</p>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-5 col-xs-5 subPad">
+          <div
+            class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12 end"
+            style="padding-top: 1em"
+          >
+            <p class="sub" style="margin-bottom: 0px">
+              <span class="asterisk">*</span>Unit of Measure: MTs
+            </p>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12">
+        <div id="chart-area"></div>
+      </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12" >
+      <div class="bordergraph" style="margin-right: -1em;">
+        <div class="row docsRow" style="padding:1em">
+          <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12 col-xs-12">
+            <div
+              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12"
+            >
+              <p class="cargos">Total Outstanding Invoices</p>
+            </div>
+            <div
+              class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12"
+            >
+              <p class="cargoNo">
+                {{ totalDueInvoice ? (totalDueInvoice | number) : 0 }}
+              </p>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 col-xs-12" style="padding: 0em 1em 1em 1em;position: relative;">
+          <div id="chart-pie" ></div>
+          <div class="text-center pieAlignment" *ngIf="dataFlag">
+            No data available
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  </div>
